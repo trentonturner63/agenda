@@ -10,11 +10,11 @@ def agenda():
         "What would you like to do?  (A - look at agenda, B - create task, C - clear list, or D - quit) ").upper()
     if option == "A":
         look_at_agenda()
-    if option == "B":
+    elif option == "B":
         create_task()
-    if option == "C":
+    elif option == "C":
         clear_list()
-    if option == "D":
+    elif option == "D":
         print("Have a nice day!")
     else:
         print("Invalid option.")
@@ -29,7 +29,7 @@ def valid_days():
     week_list = [day_list for day_list in week.keys()]
     if day not in week_list:
         print("Invalid day.")
-        look_at_agenda()
+        valid_days()
 
 
 # Loads whatever string from week.dat file
