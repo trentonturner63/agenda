@@ -51,8 +51,7 @@ class Agenda(object):
         week_list = [day_list for day_list in week.keys()]
         if self.day not in week_list:
             print("Invalid day.")
-            self.valid_days
-        return self.day
+            self.valid_days()
 
     """ Loads whatever string from week.dat file """
 
