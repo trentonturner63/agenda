@@ -36,12 +36,12 @@ class Agenda(object):
         If `valid_inputs` is not provided, returns the value from user as is.
         """
         if valid_inputs:
-            valid_inputs = map(lambda x: x.upper(), valid_inputs)
+            valid_inputs = list(map(lambda x: x.upper(), valid_inputs))
         while True:
             user_input = input(message)
+            user_input = user_input.upper()
             if not valid_inputs:
                 return user_input
-            user_input = user_input.upper()
             if user_input in valid_inputs:
                 return user_input
             print("Invalid option chosen. Try again.")
